@@ -65,6 +65,24 @@
         left: 0;
         right: 0;
         bottom: 0;
+        display: flex;
+        /* justify-content: flex-end hace que la info se coloque en la parte inferior de la imagen ; */
+        justify-content: flex-end;
+        /* Flex direction hace que que l ainfo se coloque en columna  */
+        flex-direction: column;
+      }
+
+      .carousel-item__details img {
+        height: 15px;
+      }
+
+      .carousel-item__details p {
+        margin: 0;
+      }
+
+      .carousel-item__details:hover {
+        opacity: 1;
+        color: white;
       }
     </style>
   </head>
@@ -90,7 +108,7 @@
               />
             </div>
             <p class="carousel-item__details--title">Título descriptivo</p>
-            <p class="carousel-item__details-subtitle">2019 16+ 114minutos</p>
+            <p class="carousel-item__details-subtitle">2019 +16 114minutos</p>
           </div>
         </div>
         <div class="carousel-item">
@@ -112,7 +130,51 @@
               />
             </div>
             <p class="carousel-item__details--title">Título descriptivo</p>
-            <p class="carousel-item__details-subtitle">2019 16+ 114minutos</p>
+            <p class="carousel-item__details-subtitle">2019 +16 114minutos</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="https://images.pexels.com/photos/5727935/pexels-photo-5727935.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="christmas-tree"
+          />
+
+          <div class="carousel-item__details">
+            <div>
+              <img
+                src="https://raw.githubusercontent.com/teffcode/Platzi-Frontend-Dev/master/assets/play-icon.png"
+                alt="play-icon"
+              />
+              <img
+                src="https://raw.githubusercontent.com/teffcode/Platzi-Frontend-Dev/master/assets/plus-icon.png"
+                alt="plus-icon"
+              />
+            </div>
+            <p class="carousel-item__details--title">Título descriptivo</p>
+            <p class="carousel-item__details-subtitle">2019 +16 114minutos</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="https://images.pexels.com/photos/3256265/pexels-photo-3256265.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            alt="blond-girl"
+          />
+
+          <div class="carousel-item__details">
+            <div>
+              <img
+                src="https://raw.githubusercontent.com/teffcode/Platzi-Frontend-Dev/master/assets/play-icon.png"
+                alt="play-icon"
+              />
+              <img
+                src="https://raw.githubusercontent.com/teffcode/Platzi-Frontend-Dev/master/assets/plus-icon.png"
+                alt="plus-icon"
+              />
+            </div>
+            <p class="carousel-item__details--title">Título descriptivo</p>
+            <p class="carousel-item__details-subtitle">2019 +16 114minutos</p>
           </div>
         </div>
       </div>
