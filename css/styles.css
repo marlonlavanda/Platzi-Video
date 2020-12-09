@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  background-color: #21c08b;
+  background-color: #8f57fb;
   font-family: "Mulish", sans-serif;
 }
 
 .header {
-  background-color: #21c08b;
+  background-color: #8f57fb;
   width: 100%;
   height: 80px;
   display: flex;
@@ -19,7 +19,173 @@ body {
   margin-left: 10px;
 }
 
-.login {
+.header__menu {
+  margin-right: 60px;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+  margin: 0 0 0 -14px;
+}
+
+.header__menu:hover ul,
+ul:hover {
+  display: block;
+}
+
+.header__menu li {
+  margin: 10px 0;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  margin-top: 20px;
+  margin-right: 8px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu--profile img {
+  width: 40px;
+  margin-right: 8px;
+}
+
+.header__menu--profile p {
+  margin: 0;
+  color: white;
+}
+
+.main {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__title {
+  color: white;
+  font-size: 25px;
+}
+
+.input-search {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  height: 50px;
+  padding: 0px 20px;
+  width: 70%;
+}
+::placeholder {
+  color: white;
+}
+
+.categories__title {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+}
+
+.carousel__container {
+  white-space: nowrap;
+  margin: 70px 0;
+  padding-bottom: 10px;
+}
+.carousel-item {
+  background-color: palevioletred;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.carousel-item__details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  font-size: 10px;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  /* justify-content: flex-end hace que la info se coloque en la parte inferior de la imagen ; */
+  justify-content: flex-end;
+  /* Flex direction hace que que l ainfo se coloque en columna  */
+  flex-direction: column;
+}
+
+.carousel-item__details img {
+  height: 15px;
+}
+
+.carousel-item__details p {
+  margin: 0;
+}
+
+.carousel-item__details:hover {
+  opacity: 1;
+  color: white;
+}
+
+/* .login {
   background: linear-gradient(#21c08b, #ab88ff);
   display: flex;
   align-items: center;
@@ -37,6 +203,9 @@ body {
   padding: 60px 68px 40px;
   min-height: 700px;
   width: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .login__container--form {
@@ -97,13 +266,62 @@ body {
   border-top: 0;
   border-right: 0;
   border-bottom: 2px solid white;
-  font-size: 26px;
-  font-family: "Muli", m sans serif;
+  font-size: 16px;
+  font-family: "Mulish", sans-serif;
   margin-bottom: 20px;
   padding: 0 20px;
   outline: none;
+  height: 50px;
 }
 
 ::placeholder() {
   color: white;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 24px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Mulish", sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 10px 0;
+} */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #8f57fb;
+}
+
+.footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .login__container {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
